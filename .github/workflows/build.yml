@@ -42,9 +42,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          dir D:\a\Test\Test\.sonar\scanner
           cd ConsoleApp1
-          dir 
           cmd.exe /c ..\.sonar\scanner\dotnet-sonarscanner begin /k:"Shinwapro-API" /o:"shinwapro" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build
           cmd.exe /c ..\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
