@@ -42,7 +42,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          dir
+          cd ConsoleApp1
           dotnet sonarscanner begin /k:"vietquytina_Test" /o:"vietquytina-test" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build
           dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
