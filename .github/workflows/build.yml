@@ -43,6 +43,6 @@ jobs:
         shell: powershell
         run: |
           cd ConsoleApp1
-          dotnet sonarscanner begin /k:"vietquytina_Test" /o:"vietquytina-test" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet-sonarscanner begin /k:"Shinwapro-API" /o:"shinwapro" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build
-          dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
