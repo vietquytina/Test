@@ -45,6 +45,6 @@ jobs:
           dir D:\a\Test\Test\.sonar\scanner
           cd ConsoleApp1
           dir 
-          dotnet-sonarscanner begin /k:"Shinwapro-API" /o:"shinwapro" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          cmd.exe /c ..\.sonar\scanner\dotnet-sonarscanner begin /k:"Shinwapro-API" /o:"shinwapro" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build
-          dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          cmd.exe /c ..\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
