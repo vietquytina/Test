@@ -6,8 +6,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int a = 5;
-            int b = 6;
+	    int a = 5;
+		int b = 5;
             Console.WriteLine("Hello World!");
         }
     }
